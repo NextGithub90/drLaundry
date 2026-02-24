@@ -642,6 +642,397 @@ section { padding: 80px 0; position: relative; }
   line-height: 1.7;
 }
 
+/* ===== WEBINAR & KELAS OFFLINE ===== */
+#webinar { background: var(--navy-light); }
+
+/* --- Webinar Card --- */
+.webinar-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+  transition: var(--transition);
+}
+.webinar-card:hover {
+  border-color: rgba(230,57,70,0.3);
+  box-shadow: var(--shadow-lg);
+}
+.webinar-header {
+  background: linear-gradient(135deg, rgba(230,57,70,0.18) 0%, rgba(10,22,40,0.6) 100%);
+  border-bottom: 1px solid rgba(230,57,70,0.15);
+  padding: 28px 32px 24px;
+  position: relative;
+  text-align: center;
+}
+.webinar-badge-free {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--gradient-red);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glow-red);
+}
+.webinar-icon-wrap {
+  width: 64px; height: 64px;
+  background: rgba(230,57,70,0.15);
+  border: 2px solid rgba(230,57,70,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  color: var(--red-light);
+  margin: 0 auto 16px;
+}
+.webinar-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.webinar-subtitle {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+.webinar-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+}
+.webinar-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 5px 14px;
+  border-radius: var(--radius-xl);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.8);
+}
+.webinar-meta-item i { color: var(--red-light); }
+.webinar-body { padding: 28px 32px; }
+.webinar-desc {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+.webinar-desc strong { color: var(--white); }
+
+/* --- Program Cards inside Webinar --- */
+.webinar-program-card {
+  border-radius: var(--radius-md);
+  padding: 18px;
+  height: 100%;
+}
+.webinar-program-green {
+  background: rgba(64,192,87,0.07);
+  border: 1px solid rgba(64,192,87,0.2);
+}
+.webinar-program-blue {
+  background: rgba(77,171,247,0.07);
+  border: 1px solid rgba(77,171,247,0.2);
+}
+.webinar-program-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+}
+.webinar-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.webinar-dot-green { background: var(--green-accent); box-shadow: 0 0 8px rgba(64,192,87,0.6); }
+.webinar-dot-blue  { background: var(--blue-accent);  box-shadow: 0 0 8px rgba(77,171,247,0.6); }
+.webinar-program-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--green-accent);
+  margin-bottom: 12px;
+}
+.webinar-program-blue .webinar-program-price { color: var(--blue-accent); }
+.webinar-checklist { padding: 0; margin: 0; }
+.webinar-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.webinar-checklist li i { color: var(--green-accent); font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
+.webinar-program-note {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+.webinar-discuss-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--blue-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+.webinar-discuss-list { padding: 0; margin: 0; }
+.webinar-discuss-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 4px 0;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.75);
+}
+.webinar-discuss-list li i { color: var(--blue-accent); font-size: 0.75rem; margin-top: 4px; flex-shrink: 0; }
+
+/* --- Bonus Bar --- */
+.webinar-bonus {
+  background: linear-gradient(135deg, rgba(252,196,25,0.08), rgba(230,57,70,0.06));
+  border: 1px solid rgba(252,196,25,0.2);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+.webinar-bonus-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--gold-accent);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.webinar-bonus-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.webinar-bonus-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(252,196,25,0.1);
+  border: 1px solid rgba(252,196,25,0.15);
+  padding: 5px 12px;
+  border-radius: var(--radius-xl);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+}
+.webinar-bonus-item i { color: var(--gold-accent); }
+
+/* --- Offline Card --- */
+.offline-card {
+  background: linear-gradient(180deg, rgba(252,196,25,0.05) 0%, rgba(10,22,40,0.4) 100%);
+  border: 1px solid rgba(252,196,25,0.2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+  transition: var(--transition);
+}
+.offline-card:hover {
+  border-color: rgba(252,196,25,0.45);
+  box-shadow: 0 20px 60px rgba(252,196,25,0.1);
+}
+.offline-header {
+  background: linear-gradient(135deg, rgba(252,196,25,0.15) 0%, rgba(10,22,40,0.5) 100%);
+  border-bottom: 1px solid rgba(252,196,25,0.15);
+  padding: 28px 28px 22px;
+  text-align: center;
+  position: relative;
+}
+.offline-location-badge {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: rgba(252,196,25,0.15);
+  border: 1px solid rgba(252,196,25,0.3);
+  color: var(--gold-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.offline-icon-wrap {
+  width: 64px; height: 64px;
+  background: rgba(252,196,25,0.12);
+  border: 2px solid rgba(252,196,25,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  color: var(--gold-accent);
+  margin: 0 auto 16px;
+}
+.offline-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.offline-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.offline-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(252,196,25,0.08);
+  border: 1px solid rgba(252,196,25,0.15);
+  padding: 5px 14px;
+  border-radius: var(--radius-xl);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.8);
+}
+.offline-meta-item i { color: var(--gold-accent); }
+.offline-schedule-note {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+}
+.offline-body { padding: 24px 28px; }
+
+/* --- Pricing Display --- */
+.offline-pricing {
+  background: rgba(252,196,25,0.06);
+  border: 1px solid rgba(252,196,25,0.15);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+.offline-pricing-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.offline-pricing-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.offline-price-option {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+}
+.offline-price-option-gold {
+  background: rgba(252,196,25,0.1);
+  border-color: rgba(252,196,25,0.25);
+}
+.offline-price-amount {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+.offline-price-option-gold .offline-price-amount { color: var(--gold-accent); }
+.offline-price-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.offline-price-badge {
+  background: var(--gold-accent);
+  color: #1a0a00;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 20px;
+}
+.offline-price-divider {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  flex-shrink: 0;
+}
+
+/* --- Offline Benefits --- */
+.offline-benefits { margin-bottom: 16px; }
+.offline-benefits-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.offline-checklist li { font-size: 0.85rem; }
+.offline-checklist li i { color: var(--gold-accent) !important; }
+
+/* --- Quota Notice --- */
+.offline-quota-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(230,57,70,0.06);
+  border: 1px solid rgba(230,57,70,0.15);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+}
+.offline-quota-notice i { color: var(--red-light); margin-top: 2px; flex-shrink: 0; }
+
+/* --- Gold Button --- */
+.btn-gold-custom {
+  background: linear-gradient(135deg, #fcc419, #e67700);
+  color: #1a0a00;
+  padding: 14px 32px;
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(252,196,25,0.3);
+}
+.btn-gold-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(252,196,25,0.5);
+  color: #1a0a00;
+}
+
+/* --- Responsive Webinar --- */
+@media (max-width: 767px) {
+  .webinar-body { padding: 20px; }
+  .webinar-header { padding: 24px 20px 20px; }
+  .offline-body { padding: 18px 20px; }
+  .offline-header { padding: 24px 20px 18px; }
+  .offline-pricing-row { flex-direction: column; gap: 8px; }
+  .offline-price-divider { display: none; }
+  .webinar-meta-row { gap: 6px 10px; }
+}
+
 /* ===== CTA SECTION ===== */
 #cta-section {
   background: var(--gradient-hero);
