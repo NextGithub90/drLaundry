@@ -127,3 +127,21 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ===== PROYEKSI TABS =====
+document.querySelectorAll('.proyeksi-tab').forEach(tab => {
+  tab.addEventListener('click', function () {
+    // Remove active from all tabs
+    document.querySelectorAll('.proyeksi-tab').forEach(t => t.classList.remove('active'));
+    // Remove active from all tab contents
+    document.querySelectorAll('.proyeksi-tab-content').forEach(c => c.classList.remove('active'));
+    // Add active to clicked tab
+    this.classList.add('active');
+    // Show corresponding content
+    const targetId = this.getAttribute('data-tab');
+    const targetContent = document.getElementById(targetId);
+    if (targetContent) {
+      targetContent.classList.add('active');
+    }
+  });
+});

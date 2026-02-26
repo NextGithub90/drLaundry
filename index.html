@@ -258,8 +258,9 @@
                         </ul>
                         <div class="mt-3 p-3" style="background:rgba(255,255,255,0.04); border-radius:8px;">
                             <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin:0;"><strong
-                                    style="color:var(--red-light);">Skema Biaya:</strong> 5% Biaya Penggunaan Sistem,
-                                Branding, Merek &amp; Teknologi + Sewa mesin per transaksi.</p>
+                                    style="color:var(--red-light);">Skema Biaya:</strong> Sewa Mesin Rp 500.000/set + Rp
+                                5.000 per cycle transaksi + 5% Biaya Penggunaan Sistem,
+                                Branding, Merek &amp; Teknologi dari omset + COGS 20%.</p>
                         </div>
                     </div>
                     <div class="row mt-4 g-3">
@@ -365,48 +366,275 @@
         <div class="container">
             <div class="text-center reveal">
                 <div class="section-badge"><i class="las la-chart-line"></i> Proyeksi Keuangan</div>
-                <h2 class="section-title">Simulasi Proyeksi <span class="highlight">1 Set Mesin</span></h2>
-                <p class="section-desc">Investasi: Rp 50.000.000 — Harga per cycle: Rp 6.000 · Bagi hasil Mitra: 20% ·
-                    Biaya maintenance: Rp 150.000/bulan</p>
+                <h2 class="section-title">Simulasi <span class="highlight">Proyeksi Keuangan</span></h2>
+                <p class="section-desc">Estimasi pendapatan untuk masing-masing program kemitraan dr.Laundry™</p>
             </div>
-            <div class="row g-4 reveal">
-                <div class="col-md-4">
-                    <div class="scenario-card">
-                        <span class="scenario-label label-green">🟢 Konservatif</span>
-                        <h4>Rp 40.000 / hari</h4>
-                        <p class="stat">Pendapatan kotor/bulan: <strong>± Rp 1.200.000</strong></p>
-                        <p class="stat">Setelah bagi hasil 20%: <strong>± Rp 960.000</strong></p>
-                        <p class="stat">Setelah maintenance: <strong>± Rp 810.000</strong></p>
-                        <p class="stat">Pendapatan bersih/tahun: <strong>± Rp 9.720.000</strong></p>
-                        <p class="stat">Estimasi 5 tahun: <strong>± Rp 48.600.000</strong></p>
-                        <div class="result">
-                            <i class="las la-arrow-right"></i> Hampir mencapai nilai investasi dalam 5 tahun
-                        </div>
+
+            <!-- Proyeksi Tabs -->
+            <div class="proyeksi-tabs reveal">
+                <button class="proyeksi-tab active" data-tab="tab-mitra" id="tabBtnMitra">
+                    <i class="las la-user-tie"></i> Paket Mitra Pengelola <span class="tab-price">Rp 10 Juta</span>
+                </button>
+                <button class="proyeksi-tab" data-tab="tab-autopilot" id="tabBtnAutopilot">
+                    <i class="las la-gem"></i> Paket Autopilot Owner <span class="tab-price">Rp 50 Juta</span>
+                </button>
+            </div>
+
+            <!-- ===== TAB 1: MITRA PENGELOLA 10 JUTA ===== -->
+            <div class="proyeksi-tab-content active" id="tab-mitra">
+                <div class="proyeksi-info-bar reveal">
+                    <div class="info-bar-item"><i class="las la-money-bill-wave"></i> Investasi: <strong>Rp
+                            10.000.000</strong></div>
+                    <div class="info-bar-item"><i class="las la-cog"></i> Sewa Mesin: <strong>Rp 500.000/set + Rp
+                            5.000/cycle</strong></div>
+                    <div class="info-bar-item"><i class="las la-laptop-code"></i> Sistem, Teknologi & Brand: <strong>5%
+                            dari omset</strong></div>
+                    <div class="info-bar-item"><i class="las la-boxes"></i> COGS: <strong>20%</strong></div>
+                </div>
+
+                <!-- TABEL PROYEKSI KEUANGAN BISNIS LAUNDRY BULANAN -->
+                <div class="proyeksi-table-wrapper reveal">
+                    <h4 class="proyeksi-table-title"><i class="las la-table"></i> Proyeksi Keuangan Bisnis Laundry
+                        Bulanan</h4>
+                    <div class="table-responsive">
+                        <table class="proyeksi-table">
+                            <thead>
+                                <tr>
+                                    <th class="col-label">LAUNDRY</th>
+                                    <th class="col-low"></th>
+                                    <th class="col-med"></th>
+                                    <th class="col-high"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- PENDAPATAN -->
+                                <tr>
+                                    <td># Customer</td>
+                                    <td>8</td>
+                                    <td>14</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>Rata-Rata Nilai Order</td>
+                                    <td>Rp 40.000</td>
+                                    <td>Rp 45.000</td>
+                                    <td>Rp 50.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Omset Harian</td>
+                                    <td>Rp 320.000</td>
+                                    <td>Rp 630.000</td>
+                                    <td>Rp 1.000.000</td>
+                                </tr>
+                                <tr class="row-highlight row-total">
+                                    <td>TOTAL OMSET BULANAN</td>
+                                    <td>Rp 9.600.000</td>
+                                    <td>Rp 18.900.000</td>
+                                    <td>Rp 30.000.000</td>
+                                </tr>
+                                <tr class="row-percent">
+                                    <td></td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                </tr>
+
+                                <!-- BIAYA VARIABLE -->
+                                <tr class="row-section-gap">
+                                    <td>Bahan Baku (Chemical)</td>
+                                    <td>Rp 384.000</td>
+                                    <td>Rp 756.000</td>
+                                    <td>Rp 1.200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Gas</td>
+                                    <td>Rp 768.000</td>
+                                    <td>Rp 1.512.000</td>
+                                    <td>Rp 2.400.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Listrik &amp; Air</td>
+                                    <td>Rp 768.000</td>
+                                    <td>Rp 1.512.000</td>
+                                    <td>Rp 2.400.000</td>
+                                </tr>
+                                <tr class="row-highlight row-subtotal">
+                                    <td>TOTAL BIAYA VARIABLE</td>
+                                    <td>Rp 1.920.000</td>
+                                    <td>Rp 3.780.000</td>
+                                    <td>Rp 6.000.000</td>
+                                </tr>
+                                <tr class="row-percent">
+                                    <td></td>
+                                    <td>20,00%</td>
+                                    <td>20,00%</td>
+                                    <td>20,00%</td>
+                                </tr>
+
+                                <!-- LABA KOTOR -->
+                                <tr class="row-highlight row-profit">
+                                    <td>LABA KOTOR</td>
+                                    <td>Rp 7.680.000</td>
+                                    <td>Rp 15.120.000</td>
+                                    <td>Rp 24.000.000</td>
+                                </tr>
+                                <tr class="row-percent">
+                                    <td></td>
+                                    <td>80,00%</td>
+                                    <td>80,00%</td>
+                                    <td>80,00%</td>
+                                </tr>
+
+                                <!-- BIAYA TETAP -->
+                                <tr class="row-section-gap">
+                                    <td>Gaji &amp; Komisi</td>
+                                    <td>Rp 2.500.000</td>
+                                    <td>Rp 4.000.000</td>
+                                    <td>Rp 9.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Internet &amp; POS</td>
+                                    <td>Rp 200.000</td>
+                                    <td>Rp 200.000</td>
+                                    <td>Rp 200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Iklan dan Promosi</td>
+                                    <td>Rp 200.000</td>
+                                    <td>Rp 200.000</td>
+                                    <td>Rp 200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Lainnya</td>
+                                    <td>Rp 150.000</td>
+                                    <td>Rp 300.000</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                                <tr class="row-highlight row-subtotal">
+                                    <td>TOTAL BIAYA TETAP</td>
+                                    <td>Rp 3.050.000</td>
+                                    <td>Rp 4.700.000</td>
+                                    <td>Rp 9.900.000</td>
+                                </tr>
+                                <tr class="row-percent">
+                                    <td></td>
+                                    <td>31,77%</td>
+                                    <td>24,87%</td>
+                                    <td>33,00%</td>
+                                </tr>
+
+                                <!-- PENDAPATAN OPERASIONAL -->
+                                <tr class="row-highlight row-profit">
+                                    <td>TOTAL PENDAPATAN OPERASIONAL</td>
+                                    <td>Rp 4.630.000</td>
+                                    <td>Rp 10.420.000</td>
+                                    <td>Rp 14.100.000</td>
+                                </tr>
+                                <tr class="row-percent">
+                                    <td></td>
+                                    <td>48,23%</td>
+                                    <td>55,13%</td>
+                                    <td>47,00%</td>
+                                </tr>
+
+                                <!-- PAJAK -->
+                                <tr class="row-section-gap">
+                                    <td>PAJAK UMKM</td>
+                                    <td>Rp 48.000</td>
+                                    <td>Rp 94.500</td>
+                                    <td>Rp 150.000</td>
+                                </tr>
+                                <tr class="row-percent">
+                                    <td></td>
+                                    <td>0,5%</td>
+                                    <td>0,5%</td>
+                                    <td>0,5%</td>
+                                </tr>
+
+                                <!-- LABA BERSIH -->
+                                <tr class="row-highlight row-final">
+                                    <td>LABA BERSIH SEBELUM TEMPAT</td>
+                                    <td>Rp 4.582.000</td>
+                                    <td>Rp 10.325.500</td>
+                                    <td>Rp 13.950.000</td>
+                                </tr>
+                                <tr class="row-percent row-percent-final">
+                                    <td></td>
+                                    <td>47,73%</td>
+                                    <td>54,63%</td>
+                                    <td>46,50%</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="scenario-card" style="border-color:rgba(252,196,25,0.2);">
-                        <span class="scenario-label label-yellow">🟡 Moderat</span>
-                        <h4>Rp 60.000 / hari</h4>
-                        <p class="stat">Pendapatan bersih/bulan: <strong>± Rp 1.290.000</strong></p>
-                        <p class="stat">Pendapatan bersih/tahun: <strong>± Rp 15.480.000</strong></p>
-                        <div class="result" style="color:var(--gold-accent);">
-                            <i class="las la-arrow-right"></i> Estimasi break even sekitar 3–4 tahun
+            </div>
+
+            <!-- ===== TAB 2: AUTOPILOT 50 JUTA ===== -->
+            <div class="proyeksi-tab-content" id="tab-autopilot">
+                <div class="proyeksi-info-bar reveal"
+                    style="border-color:rgba(64,192,87,0.2); background:rgba(64,192,87,0.04);">
+                    <div class="info-bar-item"><i class="las la-money-bill-wave" style="color:var(--green-accent);"></i>
+                        Investasi: <strong>Rp 50.000.000 / 1 Set Mesin</strong></div>
+                    <div class="info-bar-item"><i class="las la-qrcode" style="color:var(--green-accent);"></i> Harga
+                        per cycle: <strong>Rp 6.000</strong></div>
+                    <div class="info-bar-item"><i class="las la-handshake" style="color:var(--green-accent);"></i> Bagi
+                        hasil Mitra: <strong>20%</strong></div>
+                    <div class="info-bar-item"><i class="las la-wrench" style="color:var(--green-accent);"></i> Biaya
+                        maintenance: <strong>Rp 150.000/bulan</strong></div>
+                </div>
+                <div class="row g-4 reveal">
+                    <!-- KONSERVATIF -->
+                    <div class="col-md-4">
+                        <div class="scenario-card">
+                            <span class="scenario-label label-green">🟢 Konservatif</span>
+                            <h4>Rp 50.000 / hari</h4>
+                            <div class="scenario-divider"></div>
+                            <p class="stat">Pendapatan kotor/bulan: <strong>± Rp 1.500.000</strong></p>
+                            <p class="stat">Setelah bagi hasil 20%: <strong>± Rp 1.300.000</strong></p>
+                            <p class="stat">Setelah maintenance: <strong>± Rp 1.150.000</strong></p>
+                            <p class="stat">Pendapatan bersih/tahun: <strong>± Rp 13.800.000</strong></p>
+                            <p class="stat">Estimasi 5 tahun: <strong>± Rp 69.000.000</strong></p>
+                            <div class="result">
+                                <i class="las la-arrow-right"></i> Estimasi 3–4 tahun balik modal
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="scenario-card" style="border-color:rgba(77,171,247,0.2);">
-                        <span class="scenario-label label-blue">🔵 Optimal</span>
-                        <h4>Rp 90.000 / hari</h4>
-                        <p class="stat">Pendapatan bersih/bulan: <strong>± Rp 2.010.000</strong></p>
-                        <p class="stat">Pendapatan bersih/tahun: <strong>± Rp 24.120.000</strong></p>
-                        <div class="result" style="color:var(--blue-accent);">
-                            <i class="las la-arrow-right"></i> Estimasi break even sekitar 2–3 tahun
+                    <!-- MODERAT -->
+                    <div class="col-md-4">
+                        <div class="scenario-card" style="border-color:rgba(252,196,25,0.2);">
+                            <span class="scenario-label label-yellow">🟡 Moderat</span>
+                            <h4>Rp 75.000 / hari</h4>
+                            <div class="scenario-divider" style="background:rgba(252,196,25,0.2);"></div>
+                            <p class="stat">Pendapatan kotor/bulan: <strong>± Rp 2.250.000</strong></p>
+                            <p class="stat">Setelah bagi hasil 20%: <strong>± Rp 1.800.000</strong></p>
+                            <p class="stat">Setelah maintenance: <strong>± Rp 1.650.000</strong></p>
+                            <p class="stat">Pendapatan bersih/tahun: <strong>± Rp 19.800.000</strong></p>
+                            <p class="stat">Estimasi 5 tahun: <strong>± Rp 99.000.000</strong></p>
+                            <div class="result" style="color:var(--gold-accent);">
+                                <i class="las la-arrow-right"></i> Estimasi 2–3 tahun balik modal
+                            </div>
+                        </div>
+                    </div>
+                    <!-- OPTIMAL -->
+                    <div class="col-md-4">
+                        <div class="scenario-card" style="border-color:rgba(77,171,247,0.2);">
+                            <span class="scenario-label label-blue">🔵 Optimal</span>
+                            <h4>Rp 100.000 / hari</h4>
+                            <div class="scenario-divider" style="background:rgba(77,171,247,0.2);"></div>
+                            <p class="stat">Pendapatan kotor/bulan: <strong>± Rp 3.000.000</strong></p>
+                            <p class="stat">Setelah bagi hasil 20%: <strong>± Rp 2.400.000</strong></p>
+                            <p class="stat">Setelah maintenance: <strong>± Rp 2.250.000</strong></p>
+                            <p class="stat">Pendapatan bersih/tahun: <strong>± Rp 27.000.000</strong></p>
+                            <p class="stat">Estimasi 5 tahun: <strong>± Rp 135.000.000</strong></p>
+                            <div class="result" style="color:var(--blue-accent);">
+                                <i class="las la-arrow-right"></i> Estimasi 1½–2 tahun balik modal
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- Disclaimer -->
             <div class="disclaimer-box reveal">
                 <i class="las la-exclamation-triangle"></i>
